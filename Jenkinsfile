@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage (git) {
             steps {
-                git 'https://github.com/vamsibyramala/dicet_tv.git'
+                git '
             }
         }
         stage (build) {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage (deploy) {
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.111.34.221:8081/')], contextPath: 'tv', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId:'222', path: '', url: 'http://http://3.110.185.141:8080//')], contextPath: 'sanju', war: '**/*.war'
             }
         }
     }
