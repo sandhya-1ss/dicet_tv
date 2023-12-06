@@ -1,9 +1,11 @@
 pipeline {
     agent any
+    environment{
+        PATH="/bin/mvn:$PATH"
     stages {
         stage (git) {
             steps {
-                git '
+                git 'https://github.com/sandhya-1ss/dicet_tv.git'
             }
         }
         stage (build) {
